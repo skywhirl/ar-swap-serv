@@ -118,7 +118,7 @@ class SwapController extends Controller
     {
         $client = new \GuzzleHttp\Client();
         $response = $client->request('GET', 
-        'https://api.etherscan.io/api?module=stats&action=ethprice&apikey='+ env('ETHERSCAN_API_KEY')
+        'https://api.etherscan.io/api?module=stats&action=ethprice&apikey=' . env('ETHERSCAN_API_KEY')
         , [    
         ]);
         $response = json_decode($response->getBody()->getContents(), true);
