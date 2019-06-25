@@ -77,7 +77,7 @@ class SwapController extends Controller
     {
         $client = new \GuzzleHttp\Client();
         $response = $client->request('GET', 
-        'http://api-rinkeby.etherscan.io/api?module=account&action=txlist&address='.env('ETH_ADDR').'&startblock=0&endblock=99999999&sort=desc&apikey=YourApiKeyToken', [    
+        'http://api.etherscan.io/api?module=account&action=txlist&address='.env('ETH_ADDR').'&startblock=0&endblock=99999999&sort=desc&apikey=YourApiKeyToken', [    
         ]);
         $response = json_decode($response->getBody()->getContents(), true);
 
